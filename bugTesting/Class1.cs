@@ -13,7 +13,7 @@ namespace bugTesting
     {
         public Bug_VehicleModCollection()
         {
-            Debug.Write("Testing type " + typeof(VehicleModCollection));
+            Debug.Write("Testing type " + typeof(VehicleModCollection)); // Marxy: Fails
             Debug.WriteLine();
             Debug.Write("Testing type " + typeof(VehicleMod));
             Debug.WriteLine();
@@ -33,9 +33,11 @@ namespace bugTesting
                 {
                     if (LocalPlayer.Character.Weapons.Current != WeaponHash.Unarmed)
                     {
+                        // This prints 0
                         Debug.Write("Current Weapon: " + LocalPlayer.Character.Weapons.Current.Hash + " Ammo: " + LocalPlayer.Character.Weapons.Current.Ammo);
                         Debug.WriteLine();
 
+                        // This prints false on first call
                         Debug.Write("Has Current Weapon: " + LocalPlayer.Character.Weapons.HasWeapon(LocalPlayer.Character.Weapons.Current));
                         Debug.WriteLine();
                     }
