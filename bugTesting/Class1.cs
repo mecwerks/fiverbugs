@@ -18,8 +18,8 @@ namespace bugTesting
         {
             Debug.Write("Testing type " + typeof(VehicleModCollection)); // Marxy: Fails
             Debug.WriteLine();
-            Debug.Write("Testing type " + typeof(VehicleMod));
-            Debug.WriteLine();
+
+            VehicleHash[] hashList = Vehicle.GetAllModelsOfClass(VehicleClass.Sports); // Marxy: Fails
         }
     }
 
