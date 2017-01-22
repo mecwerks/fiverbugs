@@ -9,6 +9,9 @@ namespace bugTesting
 {
     //
     // failed to load type VehicleModCollection
+    //
+    // NOTE: This also seems to keep player from joining server correctly,
+    //       AND will require the client to restart as it bugs out the script loading.
     public class Bug_VehicleModCollection : BaseScript
     {
         public Bug_VehicleModCollection()
@@ -33,7 +36,7 @@ namespace bugTesting
                 {
                     if (LocalPlayer.Character.Weapons.Current != WeaponHash.Unarmed)
                     {
-                        // This prints 0
+                        // This prints 0 for ammo
                         Debug.Write("Current Weapon: " + LocalPlayer.Character.Weapons.Current.Hash + " Ammo: " + LocalPlayer.Character.Weapons.Current.Ammo);
                         Debug.WriteLine();
 
